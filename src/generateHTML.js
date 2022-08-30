@@ -28,7 +28,7 @@ const generateCard = function(data) {
     return `
     <div class="justify-content-around col-4 p-3">
         <div class="border shadow rounded">
-            <div class="bg-primary text-light p-3">
+            <div class="bg-dark text-light p-3">
                 <h2>${data.getName()}</h2>
                 <h2>${getRoleSymbol(data)} ${data.getRole()}</h2>
             </div>
@@ -45,7 +45,7 @@ const rolePrompt = function(employee){
     if(employee.getRole() === 'Manager'){
         return `Office number ${employee.getOfficeNumber()}`
     } else if (employee.getRole() === 'Engineer') {
-        return `Github: <a href="https://github.com/${employee.getGithub}" target="_blank">${employee.getGithub()}</a>`
+        return `Github: <a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a>`
     } else {
         return `School: ${employee.getSchool()}`
     }
@@ -65,7 +65,7 @@ generateBasePage = allCards => {
 </head>
 <body>
     <header>
-        <h1 class="p-5 bg-danger text-light text-center">My Team</h1>
+        <h1 class="p-5 bg-dark text-light text-center">My Team</h1>
     </header>
     <div class="container">
         <div class="d-flex justify-content-center flex-wrap row">
